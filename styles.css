@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+}
+.container{
+    height: 100vh;
+    min-width: 300px;
+    width: 100%;
+    overflow: hidden; /* rating-card margin keeps affecting container otherwise */
+    background-color: hsl(216, 12%, 8%);
+}
+.rating-card{
+    width: 310px;
+    margin: 30% auto;
+     padding: 25px 20px;
+    border-radius: 20px;
+    background-color: hsl(213, 19%, 18%);
+    display: flex;
+    flex-flow: column;
+}
+.icon-star{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color:hsla(0, 0%, 100%, 0.048);
+    position: relative;
+}
+img.star{
+    position: absolute;
+    width: 13px;
+    margin: 12px 12px;
+}
+.rating-card .survey{
+color: hsl(0, 0%, 100%);
+font-weight: 400;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+.rating-card .survey h2, p{
+    margin-bottom: 15px;
+}
+.rating-card .survey p{
+    font-size: 15px;
+    color: hsl(217, 12%, 63%);
+    line-height: 1.3;
+}
+.ratings{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.rate{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color:hsla(0, 0%, 100%, 0.048);
+    padding-top: 8px;
+    display: flex;
+    justify-content: center;
+}
+p.rate:hover{
+    cursor: pointer;
+    background-color:hsl(25, 97%, 53%);
+    color: #fff;
+    font-weight: 400;
+}
+p.rate:active{
+    background-color: hsl(217, 12%, 63%);
+    color: #fff;
+    font-weight: 600;
+}
+input[type=submit]{
+    color: hsl(0, 0%, 100%);
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    width: 100%;
+    padding: 12px 0;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    border: transparent;
+    background-color: hsl(25, 97%, 53%);
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);    
+    box-shadow: 1px 1px 5px hsl(0, 0%, 6%);
+}
+input[type=submit]:active{
+    background-color: hsl(0, 0%, 92%);
+    box-shadow: none;
+}
+
+/* thank you state */
+.thank-you{
+    display: none;
+    padding: 2px 10px;
+}
+.icon-device{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+p.display-selected{
+    background-color:hsla(0, 0%, 100%, 0.048);
+    width: 150px;
+    padding: 6px 0;
+    border-radius: 20px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    color: hsl(25, 93%, 56%);
+}
+.appreciation h3{
+    margin-top: 20px;
+    text-align: center;
+    color: hsl(0, 0%, 100%) ;
+}
+.appreciation p{
+    color: hsl(217, 12%, 63%);
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.4;
+    padding-top: 13px;
+}
+
+/* media */
+@media screen and (min-width:450px){
+    .rating-card{
+         margin-top: 20%;   
+    }   
+}
+@media screen and (min-width:750px){
+    .rating-card{
+         margin-top: 15%; 
+    }    
+}
+@media screen and (min-width:950px){
+    .rating-card{
+         margin-top: 12%;
+         width: 340px;     
+    }
+}
